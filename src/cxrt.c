@@ -16,6 +16,7 @@ void CXRT_SIGNALS()
     action.sa_sigaction = cxrt_signal_handler;
     sigemptyset(&action.sa_mask);
 
+
     if(sigaction(SIGSEGV, &action, NULL) == -1)
         cxrt_exit("CXRT:ERROR: CXRT_MAIN failed replace default signal handler\n", CXERROR_SIGNAL);
 
@@ -27,6 +28,7 @@ void CXRT_SIGNALS()
 
 	if(sigaction(SIGBUS, &action, NULL) == -1)
         cxrt_exit("CXRT:ERROR: CXRT_MAIN failed replace default signal handler\n", CXERROR_SIGNAL);
+		
 
 	return;
 }

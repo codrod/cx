@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>C Extensions: README</title>
+<title>C Extensions: examples/hello_world.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -56,49 +56,44 @@ $(function() {
 </iframe>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d28a4824dc47e487b107a5db32ef43c4.html">examples</a></li>  </ul>
+</div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">README </div>  </div>
+<div class="title">hello_world.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1>C Extensions</h1>
-<h3>Overview</h3>
-<p>C Extensions, or CX for short, is a collection of extensions to the C programing language, packaged as a single shared library. These extensions include exception handling, automatic dynamic memory deallocation and destruction, a universal object interface, and generic containers. The library is written in C and is not hardware dependent. Currently only POSIX platforms are supported but a Windows port is planned. Please note that this project is still in the early stages of development. </p><h3>Documentation</h3>
-<p><a href="https://codrod.github.io/cx/index.html">https://codrod.github.io/cx/index.html</a> </p><h3>Build Instructions</h3>
-<ul>
-<li>
-make </li>
-<li>
-make test </li>
-<li>
-make docs </li>
-</ul>
-<p>Running 'make test' will generate a script 'test.sh' which is used to start the automated unit testing. </p>
-<h3>Status</h3>
-<ul>
-<li>
-exception handling - completed </li>
-<li>
-memory management - completed </li>
-<li>
-strings - completed </li>
-<li>
-universal object interface - in progress </li>
-<li>
-generic containers - not started </li>
-</ul>
-<h3>Development Plan</h3>
-<ol>
-<li>
-Complete current features </li>
-<li>
-Improve documentation </li>
-<li>
-Optimize </li>
-<li>
-Windows port </li>
-</ol>
+
+<p>Contains defs for basic types used by the entire library.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;<a class="el" href="cxlib_8h_source.html">cxlib.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for hello_world.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="hello__world_8c__incl.png" border="0" usemap="#examples_2hello__world_8c" alt=""/></div>
+<map name="examples_2hello__world_8c" id="examples_2hello__world_8c">
+<area shape="rect" id="node2" href="cxlib_8h.html" title="Single header file for entire library. " alt="" coords="575,80,635,107"/>
+<area shape="rect" id="node3" href="cxui_8h_source.html" title="cxui.h" alt="" coords="505,229,562,256"/>
+<area shape="rect" id="node17" href="cxmem_8h.html" title="Memory management. " alt="" coords="623,155,699,181"/>
+<area shape="rect" id="node13" href="cxdef_8h.html" title="Contains defs for basic types used by the entire library. " alt="" coords="758,304,823,331"/>
+<area shape="rect" id="node16" href="cxerror_8h.html" title="Error codes shared by the entire library are defined here. " alt="" coords="847,304,921,331"/>
+<area shape="rect" id="node18" href="cxrt__mutex_8h_source.html" title="cxrt_mutex.h" alt="" coords="835,229,933,256"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top"><a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Contains defs for basic types used by the entire library. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -66,7 +66,7 @@
 	void cxdelete(cxaddress_t addr);
 
 	cxaddress_t cxpush(cxaddress_t address);
-	//void cxpushall();
+	void cxpushall();
 
 	cxaddress_t cxrestore(cxmem_storage_t *storage, cxaddress_t address);
 	void cxrestoreall(cxmem_storage_t *new_storage, cxmem_storage_t *old_storage);

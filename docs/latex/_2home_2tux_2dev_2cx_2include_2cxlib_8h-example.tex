@@ -1,0 +1,20 @@
+\hypertarget{_2home_2tux_2dev_2cx_2include_2cxlib_8h-example}{}\section{/home/tux/dev/cx/include/cxlib.\+h}
+int main() \{ {\bfseries cxmain}
+
+printf(\char`\"{}\+Hello World!\textbackslash{}n\char`\"{});
+
+cxreturn 0; \}
+
+
+\begin{DoxyCodeInclude}
+
+\textcolor{preprocessor}{#if !CXLIB\_VERSION}
+
+\textcolor{preprocessor}{    #define CXLIB\_VERSION 1000000L}
+
+\textcolor{preprocessor}{    #include <cxui.h>}
+\textcolor{preprocessor}{    #include <\hyperlink{cxmem_8h}{cxmem.h}>}
+
+\textcolor{preprocessor}{#endif}
+\end{DoxyCodeInclude}
+ 
