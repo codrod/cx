@@ -1,4 +1,5 @@
 <map id="include/cxex.h" name="include/cxex.h">
-<area shape="rect" id="node2" href="$cxrt_8h_source.html" title="include/cxrt.h" alt="" coords="17,80,117,107"/>
-<area shape="rect" id="node3" href="$cxstring_8h.html" title="Strings. " alt="" coords="5,155,129,181"/>
+<area shape="rect" id="node2" href="$cxrt_8h_source.html" title="include/cxrt.h" alt="" coords="77,80,177,107"/>
+<area shape="rect" id="node3" href="$cxlib_8h.html" title="Single header file for entire library. " alt="" coords="5,155,111,181"/>
+<area shape="rect" id="node4" href="$cxstring_8h.html" title="Strings. " alt="" coords="135,155,259,181"/>
 </map>
