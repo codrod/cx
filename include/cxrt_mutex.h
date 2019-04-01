@@ -1,6 +1,6 @@
 #if !CXRT_MUTEX_VERSION
 
-	#define CXRT_MUTEX_VERSION 2000000L
+	#define CXRT_MUTEX_VERSION 1000000L
 
 	#include <pthread.h>
 	#include <cxerror.h>

@@ -1,11 +1,9 @@
-/*
-	C Extension - String
-	Cody M. Rodgers
+/*! \file cxstring.h
+	\brief Strings
 */
-
 #if !CXSTRING_VERSION
 
-	#define CXSTRING_VERSION 2000000L
+	#define CXSTRING_VERSION 1000000L
 
 	#include <string.h>
 	#include <ctype.h>

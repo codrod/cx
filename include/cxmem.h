@@ -1,6 +1,10 @@
+/*! \file cxmem.h
+	\brief Memory management
+*/
+
 #if !CXMEM_VERSION
 
-	#define CXMEM_VERSION 2000000L
+	#define CXMEM_VERSION 1000000L
 
 	#include <stdlib.h>
 
@@ -16,6 +20,7 @@
 	#define cxstatic (&CXMEM_STATIC)
 	#define cxthread_local (&CXRUNTIME.storage)
 
+	/// @private
 	typedef struct cxmem_alloc
 	{
 		cxui_t *ui;
@@ -34,14 +39,23 @@
 	}
 	cxmem_storage_t;
 
+	/// @private
 	int cxmem_storage_construct(cxmem_storage_t *storage);
+	/// @private
 	int cxmem_storage_destruct(cxmem_storage_t *storage);
+	/// @private
 	int cxmem_storage_get(cxmem_storage_t *storage, cxmem_alloc_t *alloc, cxaddress_t addr);
+	/// @private
 	int cxmem_storage_add(cxmem_storage_t *storage, cxmem_alloc_t alloc);
+	/// @private
 	int cxmem_storage_remove(cxmem_storage_t *storage, cxmem_alloc_t *alloc, cxaddress_t addr);
+	/// @private
 	int cxmem_storage_replace(cxmem_storage_t *storage, cxmem_alloc_t alloc, cxaddress_t addr);
+	/// @private
 	int cxmem_storage_merge(cxmem_storage_t *new_storage, cxmem_storage_t *old_storage);
+	/// @private
 	int cxmem_storage_of(cxmem_storage_t* *storage, cxmem_alloc_t *alloc, cxaddress_t addr);
+	/// @private
 	int cxmem_storage_get_traversal(cxaddress_t entry, cxaddress_t arg, cxaddress_t ret);
 
 	cxaddress_t cxmalloc(cxmem_storage_t *storage, cxsize_t cap);
@@ -52,7 +66,7 @@
 	void cxdelete(cxaddress_t addr);
 
 	cxaddress_t cxpush(cxaddress_t address);
-	void cxpushall();
+	//void cxpushall();
 
 	cxaddress_t cxrestore(cxmem_storage_t *storage, cxaddress_t address);
 	void cxrestoreall(cxmem_storage_t *new_storage, cxmem_storage_t *old_storage);

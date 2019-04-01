@@ -1,6 +1,6 @@
 #if !CXRT_VERSION
 
-	#define CXRT_VERSION 2000000L
+	#define CXRT_VERSION 1000000L
 	#define _XOPEN_SOURCE_EXTENDED
 
 	#include <stdio.h>
@@ -30,6 +30,7 @@
 
 	#define cxauto CXRT_AUTO()
 
+	/// @private
 	typedef struct cxrt_stack
 	{
 		cxaddress_t addr;
@@ -42,6 +43,7 @@
 	}
 	cxrt_stack_t;
 
+	/// @private
 	typedef struct cxrt_func
 	{
 		uint64_t flags;
@@ -51,6 +53,7 @@
 	}
 	cxrt_func_t;
 
+	/// @private
 	typedef struct cxrt
 	{
 		uint64_t flags;

@@ -9,7 +9,7 @@
 
 #if !CXUI_VERSION
 
-	#define CXUI_VERSION 2000000L
+	#define CXUI_VERSION 1000000L
 
 	#include <stdlib.h>
 	#include <stdarg.h>

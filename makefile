@@ -12,6 +12,8 @@ OBJS = src/cxrt.o src/cxrt_stack.o src/cxrt_mutex_posix.o src/cxex.o src/cxmem.o
 
 TESTS = test/1_cxrt.ct test/2_cxex.ct test/3_cxmem.ct test/4_cxstring.ct test/5_cxstring_iso.ct
 
+%.h: ;
+
 %.o: %.c $(INCLUDES)
 	$(CC) $(CFLAGS) -c -o $@ $< $(LDFLAGS) $(LDLIBS)
 
@@ -21,6 +23,9 @@ TESTS = test/1_cxrt.ct test/2_cxex.ct test/3_cxmem.ct test/4_cxstring.ct test/5_
 lib/libcx.a: $(OBJS)
 	$(AR) $(ARFLAGS) $@ $?
 
+doc: $(INCLUDES)
+	doxygen
+
 test: $(TESTS)
 	rm -f test.sh
 	echo "#!/bin/sh" >> test.sh
@@ -28,4 +33,4 @@ test: $(TESTS)
 	chmod u+x test.sh
 
 clean:
-	rm -fr src/*.o test/*.ct lib/libcx.a test.sh
+	rm -fr src/*.o test/*.ct doc/* lib/libcx.a test.sh
