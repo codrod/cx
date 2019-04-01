@@ -33,8 +33,9 @@ test: $(TESTS)
 	ls test/*.ct -1 >> test.sh
 	chmod u+x test.sh
 
-##docs: $(INCLUDES)
-##	doxygen
+.PHONY: docs
+docs:
+	doxygen
 
 clean:
-	rm -fr src/*.o test/*.ct doc/* examples/*.ct lib/libcx.a test.sh
+	rm -fr src/*.o test/*.ct docs/* examples/*.ct lib/libcx.a test.sh

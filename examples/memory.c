@@ -1,7 +1,7 @@
 /*!
     @example
 
-    An example of memory management
+    \brief Examples of memory management
 */
 
 #include <cxlib.h>

@@ -1,7 +1,7 @@
 /*!
     @example
 
-    Example of exception handling.
+    \brief Examples of exception handling.
 */
 
 #include <cxlib.h>

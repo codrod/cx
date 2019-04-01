@@ -1,7 +1,7 @@
 /*!
     @example
 
-    A hello world example.
+    \brief A hello world example.
 */
 
 #include <cxlib.h>
