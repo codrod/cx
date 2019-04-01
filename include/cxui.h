@@ -206,6 +206,4 @@
 	extern cxui_t cxui_struct_tm;
 	extern cxui_t cxui_clock_t;
 
-	extern CXException_CXUI_
-
 #endif
