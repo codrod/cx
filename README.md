@@ -1,7 +1,7 @@
   <h1>C Extensions</h1>
   <h3>Overview</h3>
   C Extensions, or CX for short, is a collection of extensions to the C programing language, packaged as a single shared library. These extensions include exception handling, automatic dynamic memory deallocation and destruction, a universal object interface, and generic containers. The library is written in C and is not hardware dependent. Currently only POSIX platforms are supported but a Windows port is planned. Please note that this project is still in the early stages of development.
-  <h3>Status</h5>
+  <h3>Status</h3>
   <ul>
     <li>exception handling - completed</li>
     <li>memory management - completed</li>
@@ -9,7 +9,7 @@
     <li>universal object interface - in progress</li>
     <li>generic containers - not started</li>
   </ul>
-  <h3>Development Plan</h5>
+  <h3>Development Plan</h3>
   <ol>
     <li>Complete current features</li>
     <li>Improve documentation</li>

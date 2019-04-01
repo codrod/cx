@@ -23,7 +23,7 @@ TESTS = test/1_cxrt.ct test/2_cxex.ct test/3_cxmem.ct test/4_cxstring.ct test/5_
 lib/libcx.a: $(OBJS)
 	$(AR) $(ARFLAGS) $@ $?
 
-doc: $(INCLUDES)
+docs: $(INCLUDES)
 	doxygen
 
 test: $(TESTS)
