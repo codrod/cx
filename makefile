@@ -14,12 +14,10 @@ TESTS = test/1_cxrt.ct test/2_cxex.ct test/3_cxmem.ct test/4_cxstring.ct test/5_
 
 EXAMPLES = examples/hello_world.ct examples/exceptions.ct examples/memory.ct
 
-##%.h: ;
-
 %.o: %.c $(INCLUDES)
 	$(CC) $(CFLAGS) -c -o $@ $< $(LDFLAGS) $(LDLIBS)
 
-%.ct: %.c lib/libcx.a
+%.ct: %.c lib/libfs.a
 	$(CC) $(CFLAGS) -o $@ $< $(LDFLAGS) $(LDLIBS)
 
 lib/libcx.a: $(OBJS)
