@@ -13,7 +13,7 @@
   <p>
     Running 'make test' will generate a script 'test.sh' which is used to start the automated unit testing.
   </p>
-  <h3>Status</h3>
+  <h3>Development Status</h3>
   <ul>
     <li>exception handling - completed</li>
     <li>memory management - completed</li>
