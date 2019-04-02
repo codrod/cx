@@ -2,7 +2,7 @@
   <h3>Overview</h3>
   C Extensions, or CX for short, is a collection of extensions to the C programing language, packaged as a single shared library. These extensions include exception handling, automatic dynamic memory deallocation and destruction, a universal object interface, and generic containers. The library is written in C and is not hardware dependent. Currently only POSIX platforms are supported but a Windows port is planned. Please note that this project is still in the early stages of development.
   <h3>Documentation</h3>
-  Documentation is generated using Doxygen and hosted on <a hred="https://codrod.github.io/cx/index.html">GitHub Pages</a>
+  Documentation is generated using Doxygen and hosted on <a hred="https://codrod.github.io/cx/index.html">GitHub Pages</a>.
   <h3>Build Instructions</h3>
   <ul>
     <li>make</li>
