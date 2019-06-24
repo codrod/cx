@@ -65,7 +65,7 @@ int main()
 	}
 
 	if(ret = cxrt_stack_destruct(&stack))
-		printf("cxrt_stack_des: %i", ret);;
+		printf("cxrt_stack_des: %i", ret);
 
 	__cxmain__
 
@@ -80,6 +80,8 @@ int main()
 	pthread_join(thr, NULL);
 	pthread_join(thr2, NULL);
 	pthread_join(thr3, NULL);
+
+	//printf("after join\n");
 
 	CXRT_RETURN();
 
@@ -104,6 +106,8 @@ int func()
 {
 	__cxfunc__
 
+	//printf("func_\n");
+
 	func2();
 
 	cxreturn 0;
@@ -112,6 +116,8 @@ int func()
 int func2()
 {
 	__cxfunc__
+
+	//printf("func_2\n");
 
 	func3();
 
@@ -122,12 +128,16 @@ int func3()
 {
 	__cxfunc__
 
+	//printf("func_3\n");
+
 	cxreturn 0;
 }
 
 void* func_thread(void *param)
 {
 	__cxthread__
+
+	//printf("func_thread\n");
 
 	func();
 

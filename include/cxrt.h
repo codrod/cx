@@ -1,6 +1,6 @@
 #if !CXRT_VERSION
 
-	#define CXRT_VERSION 1000000L
+	#define CXRT_VERSION 1000001L
 	#define _XOPEN_SOURCE_EXTENDED
 
 	#include <stdio.h>

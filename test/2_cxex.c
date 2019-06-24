@@ -108,7 +108,6 @@ int main()
 	}
 	cxcatch()
 	{
-		printf("caught segfault\n");
 		if(!cxex_istype(cxexcept, CXException_Signal_SegFault))
 			printf("cxcatch: did not catch SegFault %s\n", cxexcept.type);
 	}

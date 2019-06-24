@@ -303,24 +303,3 @@ cxstring_t cxstring_vprintf(cxstring_t string, char *format, va_list argv)
 
     return string;
 }
-
-/*
-void cxui_cxstring_t_construct(cxsize_t size_of, cxaddress_t addr, va_list *argv)
-{
-    cxstring_t *str = addr;
-    CX_UNUSED(argv);
-
-    *str = cxstring_construct(NULL, "", CXSTRING_DEFAULT_CAP);
-
-    return;
-}
-
-void cxui_cxstring_t_destruct(cxaddress_t addr)
-{
-    cxstring_t *str = addr;
-
-    cxstring_destruct(*str);
-
-    return;
-}
-*/

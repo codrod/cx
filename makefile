@@ -17,7 +17,7 @@ EXAMPLES = examples/hello_world.ct examples/exceptions.ct examples/memory.ct
 %.o: %.c $(INCLUDES)
 	$(CC) $(CFLAGS) -c -o $@ $< $(LDFLAGS) $(LDLIBS)
 
-%.ct: %.c lib/libfs.a
+%.ct: %.c lib/libcx.a
 	$(CC) $(CFLAGS) -o $@ $< $(LDFLAGS) $(LDLIBS)
 
 lib/libcx.a: $(OBJS)
@@ -31,8 +31,8 @@ test: $(TESTS)
 	ls test/*.ct -1 >> test.sh
 	chmod u+x test.sh
 
-.PHONY: docs
-docs:
+.PHONY: doc
+doc:
 	doxygen
 
 clean:

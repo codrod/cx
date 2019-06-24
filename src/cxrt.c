@@ -16,7 +16,6 @@ void CXRT_SIGNALS()
     action.sa_sigaction = cxrt_signal_handler;
     sigemptyset(&action.sa_mask);
 
-
     if(sigaction(SIGSEGV, &action, NULL) == -1)
         cxrt_exit("CXRT:ERROR: CXRT_MAIN failed replace default signal handler\n", CXERROR_SIGNAL);
 
@@ -28,7 +27,6 @@ void CXRT_SIGNALS()
 
 	if(sigaction(SIGBUS, &action, NULL) == -1)
         cxrt_exit("CXRT:ERROR: CXRT_MAIN failed replace default signal handler\n", CXERROR_SIGNAL);
-		
 
 	return;
 }
@@ -91,15 +89,8 @@ void CXRT_RETURN()
 			cxrt_exit("CXRT:ERROR: CXRT_RETURN failed to destruct thread local storage\n", CXERROR_RETURN);
 
 		if(CXRUNTIME.flags & CXRT_FLAG_MAIN)
-		{
 			if(cxmem_storage_destruct(&CXMEM_STATIC))
 				cxrt_exit("CXRT:ERROR: CXRT_RETURN failed to destruct static storage\n", CXERROR_RETURN);
-
-			if(cxrt_mutex_destruct(CXMEM_STATIC.mutex))
-				cxrt_exit("CXRT:ERROR: CXRT_RETURN failed to destruct static storage mutex\n", CXERROR_RETURN);
-
-			free(CXMEM_STATIC.mutex);
-		}
 	}
 
 	if(cxrt_stack_peak(&CXRUNTIME.stack, (cxaddress_t*)&func))
