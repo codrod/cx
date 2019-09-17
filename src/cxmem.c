@@ -76,28 +76,28 @@ void cxfree(cxaddress_t addr)
 	return;
 }
 
-cxaddress_t cxnew(cxmem_storage_t *storage, cxui_t *ui, ...)
+cxaddress_t cxnew(cxmem_storage_t *storage, cxinter_t *inter, ...)
 {
 	cxmem_alloc_t alloc = {};
 	int ret = 0, i = 0;
 
 	va_list argv;
-	va_start(argv, ui);
+	va_start(argv, inter);
 
-	if(!storage || !ui)
+	if(!storage || !inter)
 		cxthrow(CXException_Memory_InvalidArg);
 
-	if(!(alloc.addr = calloc(1, ui->size_of)))
+	if(!(alloc.addr = calloc(1, inter->size_of)))
 		cxthrow(CXException_Memory_NoMemory);
 
-	alloc.ui = ui;
-	alloc.cap = ui->size_of;
+	alloc.inter = inter;
+	alloc.cap = inter->size_of;
 
-	if(ui->construct)
+	if(inter->construct)
 	{
 		cxtry
 		{
-			(*ui->construct)(ui->size_of, alloc.addr, &argv);
+			(*inter->construct)(inter->size_of, alloc.addr, &argv);
 		}
 		cxcatch()
 		{
@@ -127,11 +127,11 @@ void cxdelete(cxaddress_t addr)
 	if(!storage)
 		cxthrow(CXException_Memory_InvalidAddress);
 
-	if(alloc.ui && alloc.ui->destruct)
+	if(alloc.inter && alloc.inter->destruct)
 	{
 		cxtry
 		{
-			(*alloc.ui->destruct)(alloc.addr);
+			(*alloc.inter->destruct)(alloc.addr);
 		}
 		cxcatch()
 		{

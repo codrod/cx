@@ -9,7 +9,7 @@
 	#include <stdlib.h>
 
 	#include <cxerror.h>
-	#include <cxui.h>
+	#include <cxinter.h>
 	#include <cxdef.h>
 	#include <cxrt_mutex.h>
 
@@ -23,7 +23,7 @@
 	/// @private
 	typedef struct cxmem_alloc
 	{
-		cxui_t *ui;
+		cxinter_t *inter;
 		cxaddress_t addr;
 		cxsize_t cap;
 	}
@@ -62,7 +62,7 @@
 	cxaddress_t cxrealloc(cxaddress_t addr, cxsize_t cap);
 	void cxfree(cxaddress_t addr);
 
-	cxaddress_t cxnew(cxmem_storage_t *storage, cxui_t *ui, ...);
+	cxaddress_t cxnew(cxmem_storage_t *storage, cxinter_t *inter, ...);
 	void cxdelete(cxaddress_t addr);
 
 	cxaddress_t cxpush(cxaddress_t address);

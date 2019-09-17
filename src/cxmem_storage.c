@@ -18,20 +18,18 @@ int cxmem_storage_construct(cxmem_storage_t *storage)
 
 int cxmem_storage_destruct(cxmem_storage_t *storage)
 {
-	int i = 0, j = 0, ret = 0, tmp = 0;
+	int i = 0, ret = 0, tmp = 0;
 
 	if(storage->mutex && (tmp = cxrt_mutex_lock(storage->mutex)))
 		ret = tmp;
 
 		for(; i < storage->size; i++)
 		{
-			if(storage->allocs[i].ui && storage->allocs[i].ui->destruct)
+			if(storage->allocs[i].inter && storage->allocs[i].inter->destruct)
 			{
-				j = 0;
-
 				cxtry
 				{
-					(*storage->allocs[i].ui->destruct)(&storage->allocs[i]);
+					(*storage->allocs[i].inter->destruct)(&storage->allocs[i]);
 				}
 				cxcatch()
 				{
